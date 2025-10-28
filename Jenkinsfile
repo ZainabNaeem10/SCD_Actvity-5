@@ -18,8 +18,7 @@ NEW_VERSION = "1.3.0"
 stages {
 stage('Build') {
 steps {
-echo "Building version ${NEW_VERSION} on branch
-${params.BRANCH_NAME}"
+echo "Building version ${NEW_VERSION} on branch ${params.BRANCH_NAME}"
 //bat &quot;mvn clean package -Dversion=${NEW_VERSION}&quot;
 }
 }
@@ -53,5 +52,6 @@ failure {
 echo 'Pipeline failed.'
 }
 }
+
 
 }
